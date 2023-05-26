@@ -1,0 +1,29 @@
+**MAKE SURE THE LINE NUMBERS ON THE LEFT HAND SIDE ARE IN ORDER OTHERWISE CODE DOESN'T WORK PROPERLY***
+**IT'S PRETTY EASY TO UNDERSTAND HOW THIS NOTEBOOK UI WORKS**
+
+we will extract the tables from wikipedia using the pandas library.
+
+First to install the pandas library, open a notebook terminal and type "pip install pandas".
+
+Once that is installed, import the pandas as pd(short form) 
+
+Then write:
+
+naruto = pd.read_html('')
+
+In the brackets, you will put the link of website. In our case it would be https://en.wikipedia.org/wiki/Naruto_(season_1)\
+
+To know how many tables are stored in naruto (array), type len(naruto).
+This would give you the number of tables. Then proceed to print any of them.
+
+For example:
+
+naruto[1]
+
+
+
+
+
+
+
+

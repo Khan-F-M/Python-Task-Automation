@@ -1,0 +1,18 @@
+
+This will involve some basic web scraping with the pandas library. This consists in extracting data
+from websites by using some automated teqniqes.
+
+Firstly we're going to find a cvs file containing a certain data set. In our case we will use the website:
+https://www.football-data.co.uk/englandm.php
+
+Now, keep in mind you have to give it the correct location address of the file, however for our sake
+we will use the link address directly from the site instead.
+
+The rest is practically the same as the last extraction. However this time we didnt get an array of tables. We got a single table. So doing array[1] won't work. 
+
+Also to rename columns, you use a rename method that accepts key:value pairs, key being the column name currently,
+and value being the new column name. 
+
+Example:
+
+df_premier.rename(columns={'FTHG':'goals','FTAG':'goals_wide'}, inplace=True)

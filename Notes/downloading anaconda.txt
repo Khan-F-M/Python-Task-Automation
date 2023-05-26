@@ -1,0 +1,8 @@
+Download Tutorial: https://www.youtube.com/watch?v=2WL-XTl2QYI&ab_channel=DaveGray
+
+The Actual Tutorial: https://www.youtube.com/watch?v=PXMJ6FS7llk&ab_channel=freeCodeCamp.org
+
+
+Download anaconda on the main C: drive. Then type anacondo into the windows search and open the anaconda prompt. Then proceed to type "jupyter notebook" in the terminal
+and it will launch a local server on port 8888.
+

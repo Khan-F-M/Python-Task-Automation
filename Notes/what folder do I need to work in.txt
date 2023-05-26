@@ -1,0 +1,2 @@
+once the anaconda prompt terminal is open, you can navigate to any folder you like, and launch the notebook through there.
+then any file you save will automatically be saved in that folder.
