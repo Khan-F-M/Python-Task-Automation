@@ -4,18 +4,24 @@
 
 # Libraries Required
 # tk
-# ghostscript
+# ghostscript (Windows installer)
 # camelot-py
 
-import camelot
+import camelot as cm
 
 # Make sure you install camelot-py[base]
 # Don't install Camelot or CV versions. Those are two different things.
 # Cv uses the openCV lib and camelot is a whole diff package
-tables = camelot.read_pdf('sample.pdf', pages='2')
+tables = cm.read_pdf('sample.pdf', pages='2')
 print(tables)
 
+# Exports all tables in csv form into compressed zip
+tables.export('SampleCSV/foo2.csv', f='csv', compress=True)
+
+# Exports specifically the 1st table into foo.csv file
+tables[0].to_csv('SampleCSV/foo.csv')
+tables[0].df
 
 # Downgrade the pyPDF: https://github.com/camelot-dev/camelot/issues/339
 # Download GhostScript: https://www.youtube.com/watch?v=Y-FYq0tA3-w&ab_channel=EngineerBaaniya
-# I had to add the GS bin to the PATH, along with python.exe
+# I had to add the GS\bin to the PATH, along with python.exe
