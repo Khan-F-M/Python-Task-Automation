@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/25522743/where-does-pip-store-save-python-3-modules-packages-on-windows-8
+
+This command to list global packages with their locations:
+pip list -v
+
+When using virtual environment the local packages is located
+ in project folder:
+<project folder>\venv\Lib\site-packages

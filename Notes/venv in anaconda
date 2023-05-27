@@ -1,0 +1,17 @@
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands
+
+Basic to create one:
+1. conda create --name myenv
+2. proceed ([y]/n)?
+
+venv with specific py ver:
+1. conda create -n myenv python=3.9
+
+venv with specific package:
+1. conda create -n myenv scipy
+
+venv with specific version of package:
+1. conda create -n myenv scipy=0.17.3
+
+venv with specific version of Python and multiple packages:
+1. conda create -n myenv python=3.9 scipy=0.17.3 astroid babel
