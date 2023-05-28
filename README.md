@@ -1,2 +1,3 @@
 # Python-Task-Automation
-Pratice automating daily tasks using python
+This repo contains my practice using python to automate mundane tasks
+
