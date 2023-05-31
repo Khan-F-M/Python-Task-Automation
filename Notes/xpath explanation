@@ -1,0 +1,25 @@
+stands for XML Path Language
+a query langauge for selecting elements from HTML pages.
+similar to css in syntax
+
+playground to test XPath: https://scrapinghub.github.io/xpath-playground/
+
+XPath syntax:
+    //tagName - selects the all the tag name elements
+        -- example is like //h1. This would select all the
+            h1 in the document/webpage.
+
+        -- You could also select one by using indices.
+            so it would look like //h1[1]. (1 is for the first one,
+            there is no 0 index in this)
+
+        -- you can also specify the attribute of the element. it would
+            look like //h1[@class='plot']
+
+    starts-with() - search's for text at the beginning
+    contains() - search's for text included inside the element.
+        -- example would be like //p[contains(@class, 'first')]
+
+    and - //tagName[(expression 1) and (expression 2)]
+    or - //tagName[(expression 1) or (expression 2)]
+        --example: //p[(@class='first') or (@class='second')]

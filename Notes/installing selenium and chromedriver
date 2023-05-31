@@ -1,0 +1,23 @@
+INSTALLING CHROMEDRIVER
+
+1. Find what version of chrome you're using by going
+    clicking on the three dots on the top right, going
+    to 'Help', then clicking on 'About Google Chrome'.
+
+2. To download the chrome driver, go to: https://chromedriver.chromium.org/downloads
+    and click the version that fits your chrome version
+
+3. After clicking, you'll be given a linux type directory, pick the
+    OS that fits your computer (Windows for me). This will start the
+    zip download
+
+4. After downloading the file, put it into a drive/folder that you'll
+    remember and unzip it. The path will be used later.
+
+
+INSTALLING SELENIUM
+
+1. This is a much simpler process. It will be installed through
+    a terminal. So open a terminal, or virtual environment in pyCharm.
+
+2. Type the command 'pip install selenium'

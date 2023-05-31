@@ -1,0 +1,15 @@
+BREAKDOWN OF HTML MARKUP SYNTAX
+
+a simple line such as
+
+<h1 class='title'> Ironman </h1>
+
+has many parts to it.
+
+1. the tag name = <h1>
+2. attribute name = class=
+3. attribute value = 'title'
+4. affected content = ironman
+5. end tag = </h1>
+
+
