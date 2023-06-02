@@ -1,7 +1,5 @@
-# THIS WAS A BIG FAILURE. AMAZON PREVENTS PEOPLE FROM SCRAPING ON THEIR WEBPAGE :(
-
-# I searched up Makoto Shinkai on Amazon.ca, and extracted
-# the information off the search results.
+# AMAZON STRICTLY PREVENTS WEB SCRAPING SO I'M GOING
+# TO AVOID DOING THAT FOR MY OWN SAFTEY
 
 from selenium import webdriver
 
@@ -22,8 +20,6 @@ service = Service(executable_path=path)
 driver = webdriver.Chrome(service=service)
 
 # opening our driver
-driver.maximize_window()
-driver.implicitly_wait(60)
 driver.get(website)
 
 
@@ -36,7 +32,7 @@ container = driver.find_elements(by='xpath', value='//div[@class="a-section a-sp
 # Create an array to hold each of the data sets
 titles = []
 prices = []
-ratings = []
+# ratings = []
 links = []
 
 # Now we iterate through the container, and get
@@ -44,23 +40,23 @@ links = []
 for i in container:
     # It helps to write down the structures in a notepad first, then paste
     # them into the xpath query
-    title = driver.find_element(by='xpath', value='./div/div/h2/a/span').text
-    price = driver.find_element(by='xpath', value='.//div//div//a//span//span').text
-    rating = driver.find_element(by='xpath', value='.//div//div//span//span/a/i/span').text
+    title = i.find_element(by='xpath', value='./div/div/h2/a/span').text
+    price = i.find_element(by='xpath', value='.//div//div//a//span//span').text
+    # rating = i.find_element(by='xpath', value='.//div//div//span//span/a/i/span').text
 
     # Getting a specific prop of an element
-    link = driver.find_element(by='xpath', value='.//div//div/h2/a').get_attribute('href')
+    link = i.find_element(by='xpath', value='.//div//div/h2/a').get_attribute('href')
 
     titles.append(title)
     prices.append(price)
-    ratings.append(rating)
+    # ratings.append(rating)
     links.append(link)
 
 # Creating DataFrame and exporting data
 dictionary_shinkai = {
         'titles': titles,
         'prices': prices,
-        'ratings': ratings,
+        # 'ratings': ratings,
         'links': links
     }
 
